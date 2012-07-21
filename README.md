@@ -1,7 +1,7 @@
 This SDK allows you to charge credit cards on an iOS 5 device using the Stripe API.
 
 Usage is a simple asynchronous call:
-
+```
 #import "Stripe.h"
 
 StripeConnection *stripe = [StripeConnection connectionWithPublishableKey:@"pk_dl4LcpeAxUEPHN3FxzuAQQmhCGmx5"];
@@ -9,7 +9,7 @@ StripeConnection *stripe = [StripeConnection connectionWithPublishableKey:@"pk_d
 StripeCard *card =  [[StripeCard alloc] init];
 card.number =       @"4111111111111111";
 card.name =         @"Bob Dylan";
-card.securityCode = "010";
+card.securityCode = @"010";
 card.expiryMonth =  [NSNumber numberWithInteger:2];
 card.expiryYear =   [NSNumber numberWithInteger:2014];
 
@@ -23,5 +23,5 @@ card.expiryYear =   [NSNumber numberWithInteger:2014];
      {
          /* handle failure */
      }];
-
+```
 Please build the "example" target for an example of it in action.
